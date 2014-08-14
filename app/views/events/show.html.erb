@@ -1,36 +1,50 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
-
-<p>
-  <strong>When:</strong>
-  <%= @event.when %>
-</p>
-
-<p>
-  <strong>Where:</strong>
-  <%= @event.where %>
-</p>
-
-<p>
-  <strong>What:</strong>
+<div class="banner">
+<%= image_tag @event.banner_url %>
+<p><%= @event.when.to_formatted_s(:long_ordinal) %></p>
+</div>
+<ul class="alt-background">
+  <li>
+<div class="inner">
+  <h1>About</h1>
   <%= @event.what %>
 </p>
 
+<div class="details">
 <p>
-	<strong>Speakers:</strong>
+When:
+  <%= @event.when %>
 </p>
-
+<p>
+ Where:
+  <%= @event.where %>
+</p>
+</div>
+</div>
+</li>
+<li>
+<div class="speakers">
+<div class="inner">
+<h1>Speakers</h1>
 <%= list_speakers(@relevant_speakers).html_safe %>
-
-<p>
-	<strong>Sponsors:</strong>
-</p>
-
+</div>
+</div>
+</li>
+<li>
+<div class="sponsors">
+<div class="inner">
+<h1>Sponsors</h1>
 <%= list_sponsors(@relevant_sponsors).html_safe %>
+</div>
+</div>
+</li>
+<li>
+<div class="venue">
+  <img src="http://fedscoop.com/events/lcogit/wp-content/uploads/2014/05/newseummap.jpg" />
+</div>
+</li>
 
+<br>
+<br>
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

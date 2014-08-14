@@ -1,6 +1,5 @@
 Servenscoop10::Application.routes.draw do
-  resources :agenda_items
-
+  get "event_page/lcogit14"
   resources :event_sponsors
     match '/event_sponsors/new', to: 'event_sponsors#new', via: 'post'
 

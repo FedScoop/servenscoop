@@ -1,14 +1,61 @@
 @import "bootstrap";
 
+.banner {
+	background-color:black;
+	background-image: url(http://fedscoop.com/events/lcogit/wp-content/uploads/2014/05/LCOG-Banner-590x901.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	height:300px;
+
+	p{
+	color:white;
+	text-align:center;
+	}
+}
+
 .content {
 	display:block;
 	position:relative;
 	top: 100px;
 }
 
+.details {
+	text-align:center;
+}
+
+.inner{
+	padding:50px;
+}
+
+ul.alt-background{
+padding:0px;
+
+li {
+	color:black;
+	background:white;
+	list-style-type: none;
+
+	h1{
+	text-align:center;
+	color: black;
+}
+}
+
+li:nth-child(even) {
+	list-style-type: none;
+	color:white;
+	background-image: url(http://fedscoop.com/events/lcogit/wp-content/uploads/2014/05/Arrows-background2-1024x424.png); background-color: rgb(12, 12, 12); background-position: 50% 124.57912457912458%;
+
+	h1{
+	text-align:center;
+	color: white	;
+}
+}	
+}
+
 .speaker_token {
 	width:150px;
-	height:330px;
+	height:280px;
 	margin: 10px;
 	display:inline-block;
 
@@ -20,7 +67,7 @@
 
 	p{
 		margin:0px;
-
+		font-size: 12px;
 	}
 }
 
@@ -33,5 +80,11 @@
 
 	img{
 		position:relative;
+	}
+}
+
+.venue {
+	img{
+	max-width:100%;
 	}
 }

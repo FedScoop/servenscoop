@@ -15,10 +15,12 @@
   <%= @sponsor.web_address %>
 </p>
 
-<%= @sponsor.htmlize.html_safe %>
-
 <%= button_to 'Add to Event', new_event_sponsor_path(:sponsor_id => @sponsor.id) %>
 
 
 <%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
 <%= link_to 'Back', sponsors_path %>
+<br><br>
+
+<%= @sponsor.htmlize.html_safe %>
+

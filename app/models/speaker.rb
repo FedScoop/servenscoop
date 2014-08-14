@@ -5,7 +5,7 @@ class Speaker < ActiveRecord::Base
   def htmlize
     out = "<div class='speaker_token col-xs-3'>"
     out << "<img src='#{self.photo_url}' />"
-    out << "<strong>#{self.first_name} #{self.last_name}</strong>"
+    out << "<p>#{self.first_name} #{self.last_name}</p>"
     out << "<p>#{self.job_title}, #{self.employer}</p>"
     out << "</div>"
     return out
