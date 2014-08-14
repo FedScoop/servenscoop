@@ -1,0 +1,26 @@
+<%= form_for(@event_speaker) do |f| %>
+  <% if @event_speaker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_speaker.errors.count, "error") %> prohibited this event_speaker from being saved:</h2>
+
+      <ul>
+      <% @event_speaker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p><%= @speaker.first_name %></p>
+  <div class="actions">
+    <%= @speaker.id %>
+    <%= f.hidden_field :speaker_id, :value => @speaker.id %>
+  </div>
+  <div class="field">
+    <%= f.label :event %><br>
+    <%= f.collection_select(:event_id, @upcoming_events, :id, :name)%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

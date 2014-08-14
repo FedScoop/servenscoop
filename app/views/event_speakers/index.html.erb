@@ -1,0 +1,31 @@
+<h1>Listing event_speakers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Speaker</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_speakers.each do |event_speaker| %>
+      <tr>
+        <% event = event_speaker.event_id %>
+        <% speaker = event_speaker.speaker_id %>
+        <td><%= Event.find(event).name %></td>
+        <td><%= Speaker.find(speaker).first_name %></td>
+        <td><%= link_to 'Show', event_speaker %></td>
+        <td><%= link_to 'Edit', edit_event_speaker_path(event_speaker) %></td>
+        <td><%= link_to 'Destroy', event_speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event speaker', new_event_speaker_path %>

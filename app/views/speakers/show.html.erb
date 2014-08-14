@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @speaker.title %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @speaker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @speaker.last_name %>
+</p>
+
+<p>
+  <strong>Suffix:</strong>
+  <%= @speaker.suffix %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @speaker.photo_url %>
+  <br />
+  <%= image_tag @speaker.photo_url %>
+</p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @speaker.job_title %>
+</p>
+
+<p>
+  <strong>Employer:</strong>
+  <%= @speaker.employer %>
+</p>
+
+<%= @speaker.htmlize.html_safe %>
+
+<%= button_to 'Add to Event', new_event_speaker_path(:speaker_id => @speaker.id) %>
+
+<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
+<%= link_to 'Back', speakers_path %>

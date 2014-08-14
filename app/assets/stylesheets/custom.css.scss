@@ -1,0 +1,37 @@
+@import "bootstrap";
+
+.content {
+	display:block;
+	position:relative;
+	top: 100px;
+}
+
+.speaker_token {
+	width:150px;
+	height:330px;
+	margin: 10px;
+	display:inline-block;
+
+	img{
+		width: 150px;
+		height: 150px;
+		border-radius: 15px;
+	}
+
+	p{
+		margin:0px;
+
+	}
+}
+
+.sponsor_token {
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	display:inline-block;
+	background-color: #eee;
+
+	img{
+		position:relative;
+	}
+}

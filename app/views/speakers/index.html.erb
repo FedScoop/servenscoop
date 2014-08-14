@@ -1,0 +1,42 @@
+    <%= list_speakers(@speakers).html_safe %>
+
+<h1>Listing speakers</h1>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Suffix</th>
+      <th>Photo url</th>
+      <th>Job title</th>
+      <th>Employer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <hr>
+    <% @speakers.each do |speaker| %>
+      <tr>
+        <td><%= speaker.title %></td>
+        <td><%= speaker.first_name %></td>
+        <td><%= speaker.last_name %></td>
+        <td><%= speaker.suffix %></td>
+        <td><%= speaker.photo_url %></td>
+        <td><%= speaker.job_title %></td>
+        <td><%= speaker.employer %></td>
+        <td><%= link_to 'Show', speaker %></td>
+        <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
+        <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Speaker', new_speaker_path %>

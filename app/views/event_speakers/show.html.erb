@@ -1,0 +1,17 @@
+<% @event = @event_speaker.event_id %>
+<% @speaker = @event_speaker.speaker_id %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= Event.find(@event).name %>
+</p>
+
+<p>
+  <strong>Speaker:</strong>
+  <%= Speaker.find(@speaker).first_name %>
+</p>
+
+<%= link_to 'Edit', edit_event_speaker_path(@event_speaker) %> |
+<%= link_to 'Back', event_speakers_path %>

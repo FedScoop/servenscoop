@@ -1,0 +1,17 @@
+<% @event = @event_sponsor.event_id %>
+<% @sponsor = @event_sponsor.sponsor_id %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= Event.find(@event).name %>
+</p>
+
+<p>
+  <strong>Speaker:</strong>
+  <%= Sponsor.find(@sponsor).name %>
+</p>
+
+<%= link_to 'Edit', edit_event_sponsor_path(@event_sponsor) %> |
+<%= link_to 'Back', event_sponsors_path %>
